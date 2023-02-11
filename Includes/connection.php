@@ -43,7 +43,7 @@
 		//$stattbl = "create table IF NOT EXISTS Status(StID int(8) AUTO_INCREMENT, Status varchar(20), PRIMARY KEY(StID))";
 		//mysqli_query($con, $stattbl) or die (mysqli_error($con));
 		
-		$btbl = "create table IF NOT EXISTS Books_Information(BID int(5) AUTO_INCREMENT, BTitle varchar(50), Author varchar(50), Publisher varchar(50), Year varchar(20), BsID varchar(8), PRIMARY KEY(BID))";
+		$btbl = "create table IF NOT EXISTS Books_Information(BID int(5) AUTO_INCREMENT, BTitle varchar(50), Author varchar(50), Publisher varchar(50), Year varchar(20), Status varchar(8), PRIMARY KEY(BID))";
 		mysqli_query($con, $btbl) or die (mysqli_error($con));
 		
 		$bsttbl = "create table IF NOT EXISTS Book_Status(BsID int(8) AUTO_INCREMENT, Availability varchar(20), Borrowed varchar(20), PRIMARY KEY(BsID))";
