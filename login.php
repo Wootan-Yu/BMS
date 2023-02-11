@@ -67,7 +67,7 @@
 		}
 		
 		
-		.login-form button {
+		.login-form input {
 			font-size: 18px;
 			font-weight: bold;
 			width: 110%;
@@ -77,7 +77,7 @@
 			border: 0;
 			text-align: center;
 		}
-		.login-form button:hover {
+		.login-form input:hover {
 			background-color: lightgray;
 		}
 		
@@ -101,8 +101,8 @@
 							<input id="LB" type="radio" name="Occupation" value="Librarian" class="radb_lib" style="text-align:center;margin-right:10px;">
 							<label id="Library" for="LB" style="margin-top: 1px;">Librarian</label>
 						</div>
-						<input type="submit" name="submit" value="Login">Login</button>
-						<input type="reset" name="reset">Cancel</button>
+						<input type="submit" name="submit" value="Login"></button>
+						<input type="reset" name="reset"></button>
 					<tr><td colspan="2"><br><center>Not registered? <a href="register.php" style="color:green">Sign up now!</a></center></td></tr>
 					</center></td></tr>
 				</form>

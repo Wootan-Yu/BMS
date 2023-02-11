@@ -121,11 +121,13 @@
 							<a href='Librarian.php'>Home</a>
 		
 								<a href='AddInfoHome.php'> Add Book Information </a>
-								<a href='View.php'> Request </a>
-								<a href='Update.php'> Update </a>
-								<a href='Search.php'> View </a>
-								<a href='List.php'> Delete </a>
-								<a href='logout.php'> Logout </a>	
+
+								<!--<a href='#'> Request </a>-->
+
+								<a href='#'> Update </a>
+								<a href='#'> View </a>
+								<a href='#'> Delete </a>
+								<a href='#'> Logout </a>
 						</div>";
                         echo "
                         <br><div class='container'> 
