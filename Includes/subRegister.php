@@ -10,7 +10,7 @@
 		$LastName = $_POST['Lname'];
 		$FirstName = $_POST['Fname'];
 		$MiddleName = $_POST['Mname'];
-		$UserDesc = $_POST['UDesc'];
+		$UserDesc = $_POST['Occupation'];
 	
 		if($LgID == "" || $Username == "" || $Password == "" || $ConfirmPassword == "" || $LastName == "" || $FirstName == "" || $MiddleName == "" || $UserDesc == "")
 		{

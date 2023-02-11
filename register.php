@@ -40,7 +40,27 @@
 			height: 60px;
 		}
 		
-		.registration-form input {
+		.registration-form input[type=text] {
+			font-size: 16px;
+			padding: 15px 10px;
+			width: 100%;
+			border: 0;
+			border-radius: 5px;
+			outline: none;
+			text-align: center;
+		}
+		
+		.registration-form input[type=password] {
+			font-size: 16px;
+			padding: 15px 10px;
+			width: 100%;
+			border: 0;
+			border-radius: 5px;
+			outline: none;
+			text-align: center;
+		}
+		
+		.registration-form input[type=radio] {
 			font-size: 16px;
 			padding: 15px 10px;
 			width: 100%;
@@ -63,7 +83,7 @@
 			text-align: center;
 		}
 		
-		.registration-form button {
+		.registration-form input[type=submit] {
 			font-size: 18px;
 			font-weight: bold;
 			width: 110%;
@@ -76,9 +96,27 @@
 			flex: 50%;
 		}
 		
-		.registration-form button:hover {
+		.registration-form input[type=reset] {
+			font-size: 18px;
+			font-weight: bold;
+			width: 110%;
+			padding: 10px 10px;
+			margin: 20px 0;
+			margin-left: 10px;
+			border-radius: 5px;
+			border: 0;
+			text-align: center;
+			flex: 50%;
+		}
+		
+		.registration-form input[type=submit]:hover {
 			background-color: lightgray;
 		}
+		
+		.registration-form input[type=reset]:hover {
+			background-color: lightgray;
+		}
+		
 		</style>
 	</head>
 	<body>
@@ -98,17 +136,16 @@
 			<tr><td>Middle Name:</td></tr> <tr><td><input type="text" placeholder="Enter Middle Name" name="Mname" size="20"></td></tr>
 			<tr><td>
 				<div class="radb" style="padding-right: 50px;">
-							<input id="ST" type="radio" name="radbutton" value="Student" class="radb_occ" style="text-align:center;height:60px;margin-right:10px;margin-top:10px;">
+							<input id="ST" type="radio" name="Occupation" value="Student" class="radb_occ" style="text-align:center;height:60px;margin-right:10px;margin-top:10px;">
                             <label id="Student" for="ST" style="margin-top:30px;">Student</label>
-							<input id="LB" type="radio" name="radbutton" value="Library" class="radb_occ" style="text-align:center;height:60px;margin-left:80px;margin-right:10px;margin-top:10px;">
-                            <label id="Library" for="LB" style="margin-top:30px; padding-right: 70px;">Library</label>
+							<input id="LB" type="radio" name="Occupation" value="Librarian" class="radb_occ" style="text-align:center;height:60px;margin-left:80px;margin-right:10px;margin-top:10px;">
+                            <label id="Librarian" for="LB" style="margin-top:30px; padding-right: 70px;">Librarian</label>
 				</div>
 			</td></tr>
 			<tr><td colspan="2">
 			<div class="clicks">
-				<button type="submit">Register</button>
-				<button type="reset">Reset</button>
-			</div>
+				<input type="submit" name="submit" value="Login">
+				<input type="reset" name="reset" value="Cancel">
 			</td></tr>
 			</form>
 		</table></center>
