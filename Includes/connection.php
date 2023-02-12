@@ -4,11 +4,11 @@
 	//user: id19355043_root
 	//pass: h9DT3Iti59rW#th4
 	//db name: id19355043_book_monitoring
-	$con = mysqli_connect("localhost", "root", "") or die ("Cannot Find Host" . mysqli_connect_error());
+	$con = mysqli_connect("localhost", "root", "","Book_Monitoring") or die ("Cannot Find Host" . mysqli_connect_error());
 	if($con)
 	{
-		$db = "create database IF NOT EXISTS Book_Monitoring";
-		mysqli_query($con,$db) or die (mysqli_error($con));
+		//$db = "create database IF NOT EXISTS Book_Monitoring_2";
+		//mysqli_query($con,$db) or die (mysqli_error($con));
 		mysqli_select_db($con, "Book_Monitoring");
 		$tbl1 = "create table IF NOT EXISTS Login(LgID varchar(20),Username varchar(20),Password varchar(20),UID varchar(20),StID int(8), PRIMARY KEY(LgID))"; //UID int(8) = UID varchar(20)
 		mysqli_query($con, $tbl1) or die (mysqli_error($con));
@@ -43,7 +43,7 @@
 		//$stattbl = "create table IF NOT EXISTS Status(StID int(8) AUTO_INCREMENT, Status varchar(20), PRIMARY KEY(StID))";
 		//mysqli_query($con, $stattbl) or die (mysqli_error($con));
 		
-		$btbl = "create table IF NOT EXISTS Books_Information(BID int(5) AUTO_INCREMENT, BTitle varchar(50), Author varchar(50), Publisher varchar(50), Year varchar(20), Status varchar(8), PRIMARY KEY(BID))";
+		$btbl = "create table IF NOT EXISTS Books_Information(BID varchar(15), BTitle varchar(50), Author varchar(50), Publisher varchar(50), Year varchar(20), BsID int(8), PRIMARY KEY(BID))";
 		mysqli_query($con, $btbl) or die (mysqli_error($con));
 		
 		$bsttbl = "create table IF NOT EXISTS Book_Status(BsID int(8) AUTO_INCREMENT, Availability varchar(20), Borrowed varchar(20), PRIMARY KEY(BsID))";
