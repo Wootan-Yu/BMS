@@ -124,10 +124,10 @@
 
 								<!--<a href='#'> Request </a>-->
 
-								<a href='#'> Update </a>
-								<a href='#'> View </a>
-								<a href='#'> Delete </a>
-								<a href='#'> Logout </a>
+								<a href='Update.php''> Update </a>
+								<a href='View.php'> View </a>
+								<a href='Delete.php'> Delete </a>
+								<a href='Logout.php'> Logout </a>
 						</div>";
                         echo "
                         <br><div class='container'> 
@@ -195,6 +195,7 @@
 				
 		</div>";	
 				}
+			}
                 else
                 {
                     echo "<table width=1000 border=1 cellspacing=2 cellpadding=2 align=center>
@@ -205,7 +206,7 @@
                     <body onload='setInterval("initRedirect0()",2000)'></body>
                     <?php
                 }
-			}
+			
 			
 			
         
