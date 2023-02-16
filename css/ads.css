@@ -1,0 +1,52 @@
+.popup-overlay
+        {
+            background-color: rgba(0,0,0,0.4);
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            opacity: 0;
+            transition: all 700ms ease;
+        }
+        .popup-overlay .input
+        {
+            width: 200px;
+            height: 200px;
+            background: red;
+            cursor: pointer;
+        }
+        .popup-overlay.active
+        {
+            opacity: 1;
+        }
+        .popup-container
+        {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            box-shadow: 0 6px 55px -10px rgba(0,0,0,0.7);
+            background-image: url("200w.gif");
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 700ms ease;
+        }
+        .popup-overlay.active .popup-container
+        {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .popup-container .right {
+            padding-left: 130px;
+        }
+        .popup-container .skip-button {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            cursor: pointer;
+        }
