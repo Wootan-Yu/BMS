@@ -5,52 +5,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Student Home</title>
+		<title>Student Page</title>
 		<link rel="stylesheet" type="text/css" href="css/student.css">
 	</head>
+	<style>
+	#CSScookie
+	{
+	position: fixed;
+	font-size: 18px;
+	font-family: times new roman;
+	top: 10px;
+	right:20px;
+	}
+
+	/* The navigation menu */
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		font-family:times new roman;
+	}
+
+	/* Navigation links */
+	.navbar a {
+		float: left;
+		font-size: 16px;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family:times new roman;
+	}
+
+
+	/* Add a red background color to navigation links on hover */
+	navbar a:hover, .subnav:hover .subnavbtn {
+	background-color: #800000;
+	}
+	</style>
 	<body>
 		<?php
-			if(isset($_COOKIE['user']))
+		$date = date('M/d/Y');
+		if (isset($_COOKIE['User']))
 			{
-				$view = "select Username, Password from login where Username='". $_COOKIE['user'] ."' ";
+				$view = "select Username, Password from login where Username='". $_COOKIE['User'] ."' ";
 				$viewGO = mysqli_query($con,$view) or die (mysqli_error());
 				if (mysqli_num_rows($viewGO)>0)
 				{
-					echo "<center><header class='head'>
-						<h2 style='font-family:Copperplate-Gothic; font-size:30px;'>Book Monitoring System</h2>
-						<p style='font-family:Calibri;'>Home | 
-						<a href='BookSearch.php'>Books</a> | 
-						<a href=''>Transaction History</a> |
-						<a href=''>About</a></p>
-					</header></center>
-					<center><div class='Welcome'>
-						<h3 style='font-size:50px;'><b>Welcome BCCT Students!</b></h3>
-						<p><b>The Book Monitoring Student was made by a small group of grade 12 students.<br>This was made to have an easy tansaction between the student and the librarian.<br>This fix the need for librarians to buy notebooks to log every transactions</b></p>
-					</div></center>
-					<a href='BookSearch.php'>
-						<div class='boxes'>
-							<img class='img1' src='bookreading.jpg' height='100' width='300' align='right' >
-							<h3 align='left'>Get Started!</h3>
-							<p align='left'>Explore the library and read anything that the school has to offer!</p>
+					echo "<br/><h4 align='right' ><?php".$date.";?></h4>
+							<label id='CSScookie' > <u> Welcome Student: " .$_COOKIE['User']. " </u> </label>
+							
+							<!-- The navigation menu -->
+						<div class='navbar'>
+							<a href='student.php'>Home</a>
+		
+								
+								<a href='Search.php'> Search </a>
+								<a href='View.php'> View </a>
+								<a href='logout.php'> Logout </a>
 						</div>
-					</a>
-					<a href=''>
-						<div class='boxes'>
-							<img class='img2' src='transac.png' height='100' width='300' align='left'>
-							<h3 align='right'>Already requested a book?</h3>
-							<p align='right'>Visit your transaction history and see!</p>
-						</div>
-					</a>
-					<a href=''>
-						<div class='boxes'>
-							<img class='img1' src='group.jpg' height='100' width='300' align='right'>
-							<h3 align='left'>About Us</h3>
-							<p align='left'>Get to know the people behind this project!</p>
-						</div>
-					</a>
-					<footer>
-						<center><p>A Project for Web Design and Capstone<br>Records and Logs: An Easy Access for Students and Librarians of Bulacan College of Commerce and Trade Inc. © 2021 Bulacan College of Commerce and Trade Inc.</p></center>
-					</footer>";
+						
+						";
 				}
 			}
 			else
@@ -58,6 +72,9 @@
 				echo "<table width=1000 border=1 cellspacing=2 cellpadding=2 align=center>
 				<tr><td align=center><strong><span class= style10>Restricted Page! You are not a Valid User....</span><strong></td></tr>
 				</table>";
+				?> <script src="scripts/log.js" type="text/javascript" language="javascript"></script>
+				<body onload='setInterval("initRedirect0()",2000)'></body>
+				<?php
 			}
 		?>
 	</body>
