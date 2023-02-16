@@ -6,7 +6,6 @@
 <html>
 	<head>
 		<title> Librarian Page </title>
-		<link rel="stylesheet" href="css/ads.css">
 	</head>
 	
 	<style>
@@ -69,15 +68,7 @@
 								<a href='Delete.php'> Delete </a>
 								<a href='logout.php'> Logout </a>
 						</div>
-						<div class='popup-overlay'>
-            <a href='https://www.lazada.com.ph/'>
-                <div class='popup-container'>
-                    <div class='right'>
-                        <div class='skip-button'>Skip in 5s</div>
-                    </div>
-                </div>
-            </a>
-        </div>
+						
 						";	
 				}
 			}
@@ -94,7 +85,7 @@
 			}
 				?>
 				
-				<script type="text/javascript" src="scripts/ads.js"></script>
+				
 	</body>
 	
 </html>
