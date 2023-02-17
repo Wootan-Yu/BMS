@@ -59,8 +59,8 @@
 							<a href='student.php'>Home</a>
 		
 								
-								<a href='Search.php'> Search </a>
-								<a href='View.php'> View </a>
+								<a href='StudentSearch.php'> Search </a>
+								<a href='StudentView.php'> View </a>
 								<a href='logout.php'> Logout </a>
 						</div>
 						
